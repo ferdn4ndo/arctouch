@@ -3,10 +3,12 @@
 	width: 200px;
 }
 
+/* Used to create a blank space on top of content for fixed topbar */
 .container-fluid {
 	margin-top: 70px;
 }
 
+/* Bottom border on navbar */
 .navbar {
 	border-bottom: 1px solid #ddd;
 }

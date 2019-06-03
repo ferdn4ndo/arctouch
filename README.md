@@ -94,6 +94,8 @@ The frontend files are listed below. All the variables, functions and event list
 
 `app.js`: Main frontend code. 
 
+`custom.css`: Small CSS changes to fix layout.
+
 ## 4. BACKEND
 
 As discussed on section 2, the backend will be PHP based. For handling the endpoints, I'm assuming an [Apache](https://www.apache.org/) web server with [mod_rewrite](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html) active, having a .htaccess file that redirects any request to a single PHP file for endpoint validation and routing, but this redirect could be done also on [nginx](https://www.nginx.com/) too (using [rewrite rules](https://www.nginx.com/blog/creating-nginx-rewrite-rules/)). This is the setup I have for hosting at the moment.

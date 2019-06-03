@@ -66,7 +66,7 @@ I'm considering two docker coantainers - one for front and another for backend -
 
 I could use just node for both sides (using some frontend framework like Vue.js or React), but for familiarity I'd choose a simple html+js for front (in a PHP server for further implementations, like sessions, login and stuff like that).
 
-During the first tryouts with the docker image, I found myself struggled on hosting containers for free. I'm having some really rough days as I'm transictioning from my current job right now, and as I'm currently the leader of a 5-members DevOps team and have to finish ongoing projects before leaving (with the deadlines shorter now). From this limitation, and currently giving up the Docker thing and will just make a front and backend using JS+PHP, making CURL calls to the TMDb API and using some framework for HTML+CSS frontend (like Bootstrap).
+During the first tryouts with the docker image, I found myself struggled on hosting containers for free. From the time limitation, I'm currently giving up the Docker thing and will just make a front and backend using JS+PHP, making CURL calls to the TMDb API and using some framework for HTML+CSS frontend (like Bootstrap).
 
 I'll assume two completly different root folders for both sides, as the intention is to make it as independently as possible, and will also talk them on distinct sections.
 
@@ -136,3 +136,7 @@ The backend files are listed below. All the variables, functions and event liste
 ## 5 LIVE DEMO
 
 There's a live demo of this project hosted [here](http://me.inf.br/arctouch/frontend). The backend is hosted [here](http://me.inf.br/arctouch/backend).
+
+## 6 FINAL CONSIDERATIONS
+
+The project itself was really straightforward to understand. My main problem was just the free time to get it done. I'm having some really rough days as I'm transictioning from my current job right now, and as I'm currently the leader of a 5-members DevOps team and have to finish ongoing projects before leaving (with the deadlines shorter now). I also did agree to make this challeng during these busy days because I really liked the job briefing and I'm still in time to say 'no' to my going-to-be new job and instead move to ArcTouch, which I'm willing to happen! :)

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ArcTouch TMDb Interface</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="dist/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="dist/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16.png">
+  <link rel="manifest" href="dist/site.webmanifest">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="dist/img/favicon-32x32.png" class="img-fluid mr-2" alt="ArchTouch TMDb Interface">
+    <div class="input-group my-2">
+      <input id="search-term" type="text" class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <input type="hidden" id="last-search-term" value="">
+      <div class="input-group-append">
+        <button class="btn btn-outline-info my-2 my-sm-0" id="submitSearch">Search</button>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <!-- Title -->
+    <div class="row">
+      <div class="col-sm text-muted">
+        <h3 id="content-title" class="my-2">Upcoming movies</h3>
+        <input type="hidden" id="upcoming-content-page" value="1">
+        <input type="hidden" id="search-content-page" value="1">
+        <input type="hidden" id="upcoming-content-max-page" value="1">
+        <input type="hidden" id="search-content-max-page" value="1">
+        <hr>
+      </div>
+    </div>
+    <!-- Upcoming movies content -->
+    <div class="row" id="upcoming-items-container">
+    </div>
+    <!-- Search results content -->
+    <div class="row" id="search-items-container" style="display: none;">
+    </div>
+  </div>
+
+  <!-- Loading modal -->
+  <div class="modal fade" id="loading_modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title">Loading, please wait...</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movie info modal -->
+  <div class="modal fade" id="movie_modal" tabindex="-1" role="dialog" aria-labelledby="movieModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieModalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="movieModalOverview"></p>
+          <h3 class="my-2">Details</h3>
+          <dl class="row">
+            <dt class="col-sm-3">Release date</dt>
+            <dd class="col-sm-9" id="movieModalReleaseDate"></dd>
+            <dt class="col-sm-3">Duration</dt>
+            <dd class="col-sm-9" id="movieModalDuration"></dd>
+            <dt class="col-sm-3">IMDB Rank</dt>
+            <dd class="col-sm-9" id="movieModalIMDBRank"></dd>
+            <dt class="col-sm-3">Budget</dt>
+            <dd class="col-sm-9" id="movieModalBudget"></dd>
+            <dt class="col-sm-3">Genres</dt>
+            <dd class="col-sm-9" id="movieModalGenres"></dd>
+            <dt class="col-sm-3">Homepage</dt>
+            <dd class="col-sm-9" id="movieModalHomepage"></dd>
+            <dt class="col-sm-3">Production Companies</dt>
+            <dd class="col-sm-9" id="movieModalCompanies"></dd>
+          </dl>
+          <h3 class="my-2">Poster</h3>
+          <div class="text-center">
+            <img id="movieModalPosterImg" class="w-50 mb-2" src="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Application JavaScript -->
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

@@ -70,7 +70,7 @@ $(document).ready(function() {
 						<h5 class="card-title">${itemData.title}</h5>
 						<p class="card-text">${itemData.overview}</p>
 						<p class="card-text"><small class="text-muted">Release date: ${convertedDate}</small></p>
-						<a href="#" data-value="${itemData.id}" class="btn btn-info btn-movie-more">Read more</a>
+						<a href="#" data-value="${itemData.id}" class="btn btn-outline-info btn-movie-more">Read more</a>
 					</div>
 				</div>
 			</div>

@@ -14,16 +14,41 @@
   <link rel="stylesheet" href="custom.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <img src="dist/img/favicon-32x32.png" class="img-fluid mr-2" alt="ArchTouch TMDb Interface">
-    <div class="input-group my-2">
-      <input id="search-term" type="text" class="form-control" type="search" placeholder="Search" aria-label="Search">
-      <input type="hidden" id="last-search-term" value="">
-      <div class="input-group-append">
-        <button class="btn btn-outline-info my-2 my-sm-0" id="submitSearch">Search</button>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="row align-items-center">
+      <div class="col-xs-auto text-center">
+        <img src="dist/img/favicon-32x32.png" class="img-fluid ml-2" alt="ArchTouch TMDb Interface">
+      </div>
+      <div class="col">
+        <div class="input-group">
+          <input id="search-term" class="form-control" type="search" placeholder="Search" aria-label="Search" autocomplete="off" autofocus="autofocus">
+          <input type="hidden" id="last-search-term" value="">
+        </div>
+      </div>
+      <div class="col-xs-1 text-center">
+        <button class="btn btn-outline-info mr-2" id="submitSearch">Search</button>
       </div>
     </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand navbar-light bg-light justify-content-start fixed-top">
+    <a href="#" class="navbar-brand">
+      <img src="dist/img/favicon-32x32.png" class="img-fluid ml-2" alt="ArchTouch TMDb Interface">
+    </a>
+    <div class="navbar-collapse" id="navbar1">
+      <form class="mx-2 my-auto d-inline w-100">
+        <div class="input-group">
+        <input type="hidden" id="last-search-term" value="">
+        <input id="search-term" class="form-control" type="search" placeholder="Search" aria-label="Search" autocomplete="off" autofocus="autofocus">
+        <div class="input-group-append">
+          <button class="btn btn-outline-info mr-2" id="submitSearch">Search</button>
+        </div>
+      </div>
+      </form>
+    </div>
   </nav>
+
+
   <div class="container-fluid">
     <!-- Title -->
     <div class="row">

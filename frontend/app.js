@@ -62,7 +62,7 @@ $(document).ready(function() {
 		return `
 		<div class="card w-100 mx-2 mb-3">
 			<div class="row no-gutters">
-				<div class="col-sm-2">
+				<div class="col-sm-4 col-md-2">
 					<img src="${posterPath}" class="card-img-top img-fluid" alt="${itemData.title}">
 				</div>
 				<div class="col">
